@@ -1,79 +1,69 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  //Step1
- // runApp(const MyApp());
- //const app = MaterialApp(title: "My Title", home: Text("Hello World")),
- runApp(
-  MaterialApp(
-    titel: "My Title",
-    home: Scaffold(
-      appBar:AppBar(
-        title: Text("My App");
-        backgroundColor: Colors.pinkAccent,
-      ),
-      body: Text("Hello Flutter"),
-      ),
- ),
-}
+  // Step 1: appBar and body
+  //runApp(const MyApp());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  //const app = MaterialApp(title: "My Title", home: Text("Hello World"));
+  //runApp(app);
+  //runApp(
+  //  MaterialApp(
+  //    title:"My Title",
+  //    home: Scaffold(
+  //      appBar: AppBar(
+  //       title: Text("My App"),
+  //        backgroundColor: Colors.blue,
+  //        centerTitle: true,
+  //      ),
+  //      body: Text("Hello Flutter"),
+  //    )
+  //  )
+  //);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+  //Step 2: Stateless widget
+  runApp(
+    MaterialApp(
+      title: "My Title",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("My App"),
+          backgroundColor: const Color.fromARGB(255, 243, 33, 33),
+          centerTitle: true,
         ),
+        body: Home(),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+    ),
+  );
+}
+
+// Step 2: Stateless widget
+
+// class Home extends StatelessWidget {
+//   const Home({super.key});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Text("Hello Flutter");
+//   }
+
+//Step 3: container widget
+class Home extends StatelessWidget {
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    // return Container(color: Colors.blueAccent, width: 300, height: 300);
+    //return Container(color: Colors.blueAccent, margin: EdgeInsets.all(10));
+    //return Container(color: Colors.blueAccent, margin: EdgeInsets.fromLTRB(5, 10, 15, 20));
+    return Center(
+      child: Container(
+        color: Colors.blueAccent,
+        margin: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+        padding: EdgeInsets.all(20),
+        child: Text(
+          "Hello Flutter",
+          style: TextStyle(fontSize: 30, letterSpacing: 3),
+        ),
       ),
     );
   }
