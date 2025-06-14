@@ -30,7 +30,7 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           title: Text("My App"),
-          backgroundColor: const Color.fromARGB(255, 243, 33, 33),
+          backgroundColor: const Color.fromARGB(255, 3, 221, 255),
           centerTitle: true,
         ),
         body: Home(),
