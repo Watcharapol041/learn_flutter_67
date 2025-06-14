@@ -52,8 +52,8 @@ class Home extends StatelessWidget {
           const SizedBox(height: 10),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: Colors.amber,
-              foregroundColor: Colors.lightBlue,
+              backgroundColor: Colors.lightBlue,
+              foregroundColor: Colors.black,
             ),
             onPressed: () {
               print("Button Pressed 4");

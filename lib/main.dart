@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_flutter_67/screen/item.dart';
 
 // step4: sperate the Home widget into its own file
 import 'screen/home.dart';
@@ -33,7 +34,8 @@ void main() {
           backgroundColor: const Color.fromARGB(255, 3, 221, 255),
           centerTitle: true,
         ),
-        body: Home(),
+        //body: Home(),
+        body: Item(),
       ),
     ),
   );
