@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 // Step 10: make a model for store data
 import 'package:learn_flutter_67/models/person.dart';
 
+// Step 12:
+import 'package:google_fonts/google_fonts.dart';
+
 class Item extends StatefulWidget {
   const Item({super.key});
 
@@ -63,8 +66,10 @@ class _ItemState extends State<Item> {
       itemBuilder: (context, index) {
         return Container(
           decoration: BoxDecoration(
-            color: Colors.grey,
+            // color: Colors.grey,
             borderRadius: BorderRadius.circular(10),
+            // step 11: use a enum
+            color: personList[index].job.color,
           ),
           margin: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
           padding: EdgeInsets.all(40),
@@ -83,7 +88,7 @@ class _ItemState extends State<Item> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    people[index].name,
+                    personList[index].name,
                     style: const TextStyle(
                       fontSize: 24,
                       color: Colors.white,
@@ -91,36 +96,25 @@ class _ItemState extends State<Item> {
                     ),
                   ),
                   Text(
-                    "${people[index].age} years old",
-                    style: const TextStyle(fontSize: 20, color: Colors.white70),
+                    "Age: ${personList[index].age}",
+                    style: TextStyle(fontSize: 18, color: Colors.white70),
                   ),
                   Text(
-                    "Job: ${people[index].job}",
-                    style: const TextStyle(fontSize: 20, color: Colors.white70),
+                    "Job: ${personList[index].job.title}",
+                    style: TextStyle(fontSize: 18, color: Colors.white70),
+                  ),
+                  Image.asset(
+                    personList[index].job.image,
+                    width: 50,
+                    height: 50,
                   ),
                 ],
-              ),
-              Text(
-                "${people[index].name} - ${people[index].age} - ${people[index].job}",
-                style: const TextStyle(
-                  fontSize: 24,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              IconButton(
-                icon: const Icon(Icons.delete, color: Colors.red),
-                onPressed: () {
-                  setState(() {
-                    people.removeAt(index);
-                  });
-                },
               ),
             ],
           ),
         );
       },
-      itemCount: people.length,
+      itemCount: personList.length,
     );
   }
 }
