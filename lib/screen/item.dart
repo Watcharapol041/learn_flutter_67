@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // Step 10: make a model for store data
 import 'package:learn_flutter_67/models/person.dart';
 
-// Step 12:
+// Step 12: ue google fonts
 import 'package:google_fonts/google_fonts.dart';
 
 class Item extends StatefulWidget {
@@ -89,19 +89,34 @@ class _ItemState extends State<Item> {
                 children: [
                   Text(
                     personList[index].name,
-                    style: const TextStyle(
+                    // style: const TextStyle(
+                    //   fontSize: 24,
+                    //   color: Colors.white,
+                    //   fontWeight: FontWeight.bold,
+                    // ),
+                    // step 12: use google fonts
+                    style: GoogleFonts.kanit(
                       fontSize: 24,
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+
                   Text(
                     "Age: ${personList[index].age}",
-                    style: TextStyle(fontSize: 18, color: Colors.white70),
+                    //style: TextStyle(fontSize: 18, color: Colors.white70),
+                    style: GoogleFonts.kanit(
+                      fontSize: 18,
+                      color: Colors.white70,
+                    ),
                   ),
                   Text(
                     "Job: ${personList[index].job.title}",
-                    style: TextStyle(fontSize: 18, color: Colors.white70),
+                    //style: TextStyle(fontSize: 18, color: Colors.white70),
+                    style: GoogleFonts.kanit(
+                      fontSize: 18,
+                      color: Colors.white70,
+                    ),
                   ),
                   Image.asset(
                     personList[index].job.image,
