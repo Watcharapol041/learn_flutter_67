@@ -21,11 +21,11 @@ import 'package:flutter/material.dart';
 // Step 11: use a enum
 
 enum Job {
-  Engineer(title: "Engineer", image: "assets/engineer.png", color: Colors.blue),
-  Doctor(title: "Doctor", image: "assets/doctor.png", color: Colors.red),
-  Teacher(title: "Teacher", image: "assets/teacher.png", color: Colors.green),
-  Artist(title: "Artist", image: "assets/artist.png", color: Colors.purple),
-  Chef(title: "Chef", image: "assets/chef.png", color: Colors.orange);
+  Engineer(title: "Engineer", image: "assets/ccc.png", color: Colors.blue),
+  Doctor(title: "Doctor", image: "assets/ccc.png", color: Colors.red),
+  Teacher(title: "Teacher", image: "assets/ccc.png", color: Colors.green),
+  Artist(title: "Artist", image: "assets/ccc.png", color: Colors.purple),
+  Chef(title: "Chef", image: "assets/ccc.png", color: Colors.orange);
 
   final String title;
   final String image;
